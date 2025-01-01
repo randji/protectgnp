@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Twitter, InstagramIcon } from "lucide-react";
+import Image from "next/image";
 
 type SocialLink = {
   href: string;
@@ -10,17 +10,17 @@ type SocialLink = {
 const defaultSocialLinks: SocialLink[] = [
   {
     href: "https://facebook.com",
-    icon: <Facebook />,
+    icon: <Image src="/facebook.png" alt="Facebook" width={24} height={24} />,
     hovercolor: "hover:text-blue-600",
   },
   {
     href: "https://twitter.com",
-    icon: <Twitter />,
+    icon: <Image src="/twitter.png" alt="Twitter" width={24} height={24} />,
     hovercolor: "hover:text-blue-400",
   },
   {
     href: "https://instagram.com",
-    icon: <InstagramIcon />,
+    icon: <Image src="/instagram.png" alt="Instagram" width={24} height={24} />,
     hovercolor: "hover:text-pink-600",
   },
 ];
@@ -40,13 +40,25 @@ const Navbar = ({
 }: NavbarProps) => {
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-2 w-full ${bgColor}`}
+      className={`fixed top-0 left-0 right-0 z-50 
+    max-w-[100vw] overflow-x-hidden
+    flex items-center justify-between 
+    px-2 sm:px-4 py-2
+    ${bgColor}`}
     >
       <div className="flex items-center">
-        <img src={logoSrc} alt="Logo" className="h-10 w-10 mr-2" />
+        <Image
+          src={logoSrc}
+          alt="Logo"
+          width={100}
+          height={100}
+          className="h-10 w-10 mr-2"
+        />
       </div>
-      <div className="text-xl font-bold text-[#114744]">{companyName}</div>
-      <div className="flex items-center space-x-4">
+      <div className="text-lg sm:text-xl font-bold text-[#0f1b1b] truncate">
+        {companyName}
+      </div>
+      <div className="flex items-center space-x-2 sm:space-x-4">
         {socialLinks.map((link, index) => (
           <Link
             key={index}
@@ -55,7 +67,7 @@ const Navbar = ({
             rel="noopener noreferrer"
           >
             <div
-              className={`text-[#114744] ${link.hovercolor} transition-colors`}
+              className={`text-[#0f1b1b] ${link.hovercolor} transition-colors`}
             >
               {link.icon}
             </div>

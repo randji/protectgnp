@@ -12,7 +12,7 @@ type AnimatedSectionProps = {
 const AnimatedSection = ({ 
   children, 
   preset = "default",  // Preset par défaut
-  delay = 0.2 
+  // delay = 0.2 
 }: AnimatedSectionProps) => {
   const controls = useAnimation();
   const ref = useRef(null);
