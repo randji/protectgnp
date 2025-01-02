@@ -15,21 +15,13 @@ const Header = ({
   logoAlt = "logo gnb protect",
 }: HeaderProps) => {
   return (
-    <header className="relative w-full h-[60vh] md:h-[80vh] shadow-2xl">
+    <header className="relative w-full h-[55vh] md:h-[80vh] shadow-2xl">
       <div>
-        <div className="absolute top-20 md:top-40 left-10 md:left-52 z-10 text-black">
-          {/* <h1 className="text-4xl  md:text-6xl font-bold lg:text-7xl mb-10 md:mb-28">
+        <div className="absolute top-44 md:top-40 left-10 md:left-52 z-10 text-black">
+          <h1 className="text-4xl  md:text-6xl font-bold lg:text-7xl mb-10 md:mb-28">
             GNP-PROTECT
-          </h1> */}
-          <Image
-            src={logoSrc}
-            alt={logoAlt}
-            width={150}
-            height={100}
-            className="object-contain"
-          />
+          </h1>
         </div>
-
 
         <div className="absolute bottom-24 md:bottom-40 z-10 text-black left-1/2 transform -translate-x-1/2">
           <h2 className="text-2xl md:text-4xl font-bold text-center text-nowrap">
@@ -42,7 +34,7 @@ const Header = ({
           </Button>
         </div>
         <div>
-          <motion.div className=" relative w-full h-[60vh] md:h-[80vh]">
+          <motion.div className=" relative w-full h-[55vh] md:h-[80vh]">
             <Image
               src={imageSrc}
               alt={alt}
