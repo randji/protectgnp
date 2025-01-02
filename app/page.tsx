@@ -103,7 +103,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-gray-800 pt-16">
       <Navbar />
 
-      <div className="relative w-full h-[50vh] md:h-[80vh]">
+      <div className="relative w-full h-[60vh] md:h-[80vh]">
         <Header />
       </div>
 
